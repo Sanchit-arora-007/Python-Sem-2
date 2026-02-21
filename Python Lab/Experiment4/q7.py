@@ -1,0 +1,17 @@
+n = int(input("Enter number of fruits in each set: "))
+s1 = set()
+s2 = set()
+print("Enter fruits for set s1:")
+for _ in range(n):
+    fruit = input()
+    s1.add(fruit)
+print("Enter fruits for set s2:")
+for _ in range(n):
+    fruit = input()
+    s2.add(fruit)
+common = s1.intersection(s2)
+only_s1 = s1.difference(s2)
+total_count = len(s1.union(s2))
+print("a) Fruits in both sets:", common)
+print("b) Fruits only in s1:", only_s1)
+print("c) Total unique fruits count:", total_count)
